@@ -1,0 +1,30 @@
+header{
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid   #ff6600;
+}
+a{
+    color:  #ff6600;
+}
+a:hover{
+    background-color:   #ff6600;
+    color:white ;
+}
+.container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+a.logo{
+    font-weight: bold;
+    padding: 1em
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+
+}
+nav ul li a{
+    padding: 1em;
+    display: inline-block;
+}

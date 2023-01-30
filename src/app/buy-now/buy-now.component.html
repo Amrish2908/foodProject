@@ -1,0 +1,79 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()">
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col mb-3">
+        <label for="firstName" class="form-lable">First Name</label>     
+        <input type="text" class="form-control" id="firstName" formControlName="firstname">
+        
+        <div class="form-text text-danger" *ngIf="FirstName.errors?.['required']&& FirstName.touched">*FirstName is
+          Required.</div>
+        <div class="form-text text-danger" *ngIf="FirstName.errors?.['minlength']">*FirstName is too short</div>
+        <div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern']">*FirstName should start with
+          Alphabet.</div>
+      </div>
+      <div class="col mb-3">
+        <label for="lastName" class="form-lable">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastname">
+        <div class="form-text text-danger" *ngIf="LastName.errors?.['required']&& LastName.touched">*LastName is
+          Required.</div>
+        <div class="form-text text-danger" *ngIf="LastName.errors?.['minlength']">*LastName is too short</div>
+        <div class="form-text text-danger" *ngIf="LastName.errors?.['pattern']">*LAstName should start with
+          Alphabet.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="email" class="form-lable">Email address</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div class="form-text text-danger" *ngIf="Email.errors?.['required']&& Email.touched">*Email is Required.
+        </div>
+        <div class="form-text text-danger" *ngIf="Email.errors?.['email']&& Email.touched">*Email is Invalid.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="mobile" class="form-lable">Mobile Number</label>
+        <input type="text" class="form-control" id="mobile" formControlName="mobile">
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['required']&&(Mobile.dirty|| Mobile.touched)">*Mobile
+          Number is
+          Required.</div>
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern']&&(Mobile.dirty|| Mobile.touched)">*Not
+          Alphabet Allow
+        </div>
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['maxlength']&& (Mobile.dirty|| Mobile.touched)">
+          *Number is Long
+        </div>
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['minlength']&& (Mobile.dirty|| Mobile.touched)">
+          *Number is Short
+        </div>
+      </div>
+      <div class="col ps-3 mb-3">
+        <div class="m-1">Gender</div>
+        <div class="form-check form-check-inline ">
+          <input class="form-check-input" type="radio" value="m" formControlName="gender" id="male">
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" value="f" formControlName="gender" id="female">
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="form-text text-danger" *ngIf="Gender.errors?.['required']">*Select Gender</div>
+      </div>
+    </div>
+
+    <div class="col-6 offset-3 mb-2">
+      <div class="d-grid">
+        <button type="submit" class="button">Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<p> {{newdata}}</p>

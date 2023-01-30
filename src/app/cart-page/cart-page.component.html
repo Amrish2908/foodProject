@@ -1,0 +1,42 @@
+<app-not-found [visible]="!cart || cart.items.length<=0" notFoundMasssage="Items Not Found"
+    resetLinkText="Go to Home Page"></app-not-found>
+<div *ngIf="cart && cart.items.length>0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.food.imageUrl" alt="cartItem.food.name">
+            </div>
+            <div>
+                <a routerLink="{{cartItem.food.id">{{cartItem.food.name}}</a>
+            </div>
+            <div>git add README.md
+               <select #quantitySelect   [(ngModel)]="cartItem.food.quantity"(change)="changeQuantity(cartItem,$event)">
+                    <option [value]="1">1</option>
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="4">4</option>
+                    <option [value]="5">5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItem.price |currency}}
+            </div>
+            <div>
+                <button class="Remove-button" (click)="removeFromCart(cartItem)">
+                    <strong> Remove</strong>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="chackout">
+        <div>
+            <div class="food-count">{{cart.items.length}}</div>
+            <div class="food-price">{{cart.totalPrice |currency}}</div>
+        </div>
+        <a routerLink="/chackout">Proceed to Chackout</a><br>
+        <a type="button"  routerLink="/buy-now">Buy Now</a>
+    </div>
+</div>
+
+
+
