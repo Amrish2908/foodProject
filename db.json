@@ -1,0 +1,106 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "data": {
+        "userData": {
+          "firstname": "uj",
+          "lastname": "yh",
+          "email": "Amrish@hgmail.com",
+          "mobile": "9898989898",
+          "gender": "m"
+        },
+        "cartData": {
+          "id": 1,
+          "price": 20,
+          "name": "Pizza Pepperoni",
+          "favorite": false,
+          "star": 2,
+          "tags": [
+            "FastFood",
+            "Pizza",
+            "Lunch"
+          ],
+          "imageUrl": "/assets/food-1.jpeg",
+          "cookTime": "10-20 ",
+          "origins": [
+            "italy"
+          ]
+        }
+      },
+      "id": 2
+    },
+    {
+      "data": {
+        "userData": {
+          "firstname": "tesrt",
+          "lastname": "nj",
+          "email": "Amrish@hgmail.com",
+          "mobile": "9898989898",
+          "gender": "m"
+        },
+        "cartData": {
+          "id": 1,
+          "price": 20,
+          "name": "Pizza Pepperoni",
+          "favorite": false,
+          "star": 2,
+          "tags": [
+            "FastFood",
+            "Pizza",
+            "Lunch"
+          ],
+          "imageUrl": "/assets/food-1.jpeg",
+          "cookTime": "10-20 ",
+          "origins": [
+            "italy"
+          ]
+        }
+      },
+      "id": 3
+    },
+    {
+      "data": {
+        "userData": {
+          "firstname": "dfe",
+          "lastname": "efg",
+          "email": "Amrish@hgmail.com",
+          "mobile": "9898989898",
+          "gender": "m"
+        },
+        "cartData": {
+          "id": 1,
+          "price": 60,
+          "name": "Pizza Pepperoni",
+          "favorite": false,
+          "star": 2,
+          "tags": [
+            "FastFood",
+            "Pizza",
+            "Lunch"
+          ],
+          "imageUrl": "/assets/food-1.jpeg",
+          "cookTime": "10-20 ",
+          "origins": [
+            "italy"
+          ]
+        }
+      },
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
